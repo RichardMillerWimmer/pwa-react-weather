@@ -8,7 +8,8 @@ export const fetchWeather = async (query) => {
     const { data } = await axios.get(url, {
         params: {
             q: query,
-            appid: `${process.env.REACT_APP_API_KEY}`
+            appid: `${process.env.REACT_APP_API_KEY}`,
+            units: 'metric'
         }
     });
     // console.log(data)
